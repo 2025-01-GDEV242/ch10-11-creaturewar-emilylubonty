@@ -38,8 +38,8 @@ public abstract class Creature
      */
     public int attack(){
         // TODO: implement a damage method
-        
-        return 0;
+        Randomizer.nextInt(this.str - this.hp); 
+        return this.str;
     }
     
     
