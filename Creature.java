@@ -11,13 +11,11 @@
  * @version 2025-04 v1.0
  */
 // we will learn what the abstract keyword does in a later chapter
-public abstract class Creature
+public abstract class Creature 
 {
     private int str;        // The strength of this creature
     private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
     private int hp;         // the current numberof hit points the creature has
-    
-  
     
     /**
      * Create a creature with a given strength and hit point level. 
@@ -40,6 +38,7 @@ public abstract class Creature
      */
     public int attack(){
         // TODO: implement a damage method
+        
         return 0;
     }
     
@@ -50,6 +49,7 @@ public abstract class Creature
      */
     public boolean isAlive() {
         // TODO: implement a method to report if the creature yet lives
+        
         return false; //change this
     }
     
