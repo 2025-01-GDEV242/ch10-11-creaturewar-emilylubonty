@@ -30,5 +30,8 @@ public class Balrog extends Demon
         );
     }
 
-    
+    public int balrog_attack(int attack){
+        attack++;
+        return attack; 
+    }
 }

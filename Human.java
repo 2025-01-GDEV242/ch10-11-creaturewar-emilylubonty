@@ -18,6 +18,7 @@ public class Human extends Creature
     
     private static final int MAX_HUMAN_MAGIC = 100;
     private static final int MIN_HUMAN_MAGIC = 1; 
+    
 
     /**
      * Constructor for objects of class Human -
@@ -42,6 +43,8 @@ public class Human extends Creature
         );
           
     }
+    
+    
     
     
     // attack() - not overridden because Humans generate basic damage

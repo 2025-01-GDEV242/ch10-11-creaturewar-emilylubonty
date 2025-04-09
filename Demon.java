@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Class Demon 
  * 
@@ -19,6 +19,7 @@ public class Demon extends Creature
     private static final int MAX_DEMON_MAGIC = 100;
     private static final int MIN_DEMON_MAGIC = 1; 
     
+    private ArrayList<Demon> armyTwo;     
     /**
      * Constructor for objects of class Demon
      */
@@ -33,10 +34,13 @@ public class Demon extends Creature
         
         this.demon_hp = str; 
         this.demon_str = hp; 
-
+        
+        
+        
+        
     }
     
-    public int demon_damage(int damage)
+    public int demonDamage(int damage)
     {
         // put your code here
         Randomizer.nextInt(MAX_DEMON_MAGIC); 
@@ -50,6 +54,8 @@ public class Demon extends Creature
         
         return damage; 
     }
+    
+    
     
 }
 

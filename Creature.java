@@ -1,4 +1,4 @@
-
+import java.util.ArrayList; 
 /**
  * Abstract class Creature - 
  * The creature is the main class from which all other battling creatures derive.
@@ -18,6 +18,10 @@ public abstract class Creature
     private  int hp;         // the current numberof hit points the creature has
     private int magic; 
     
+    
+    
+    private ArrayList<Creature> armyOne;
+    
     /**
      * Create a creature with a given strength and hit point level. 
      * Store max hitpoints to allow for healing to be implemented later
@@ -33,6 +37,18 @@ public abstract class Creature
        max_hp = hp;
     }
     
+    public void addArmy(){
+        ArrayList<Creature> armyOne = new ArrayList<Creature>(); 
+        
+        Creature human = new Human();
+   
+        int i = Randomizer.nextInt(100);
+        
+        for (i = 1; i < 100; i++){
+            armyOne.add(human); 
+        }
+    
+    }
     
     /**
      * Allows a creature to determine how much damage it is causing in this round of battle
@@ -51,7 +67,9 @@ public abstract class Creature
      */
     public boolean isAlive() {
         // TODO: implement a method to report if the creature yet lives
-        
+        if (this.hp <= 0){
+            return false;
+        }
         return true;
     }
     
@@ -61,6 +79,9 @@ public abstract class Creature
      */
     public boolean isKnockedOut() {
         //TODO: implement a method to report if the creature has been killed
+        if (this.hp <= 0){
+            return false;  
+        }
         return true;
     }
     
@@ -71,7 +92,7 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public int takeDamage(int damage) {
-        // TODO: implement this
+        // TODO: implement this 
         this.hp = this.hp - damage; 
         return this.hp;
     }
