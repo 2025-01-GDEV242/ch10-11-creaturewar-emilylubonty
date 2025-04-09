@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 /**
- * Class Demon 
- * 
- * Main class for demons. 
+ * Subclass of Creature class. Includes Demons such as Balrog and Cyberdemon. 
+ * Calculates the demon's hp, strength, and magic chances. 
  *
  * @author Emily Lubonty
- * @version 4-7-2025
+ * @version 4-9-2025
  */
 public class Demon extends Creature 
 {
@@ -22,6 +21,9 @@ public class Demon extends Creature
     private ArrayList<Demon> armyTwo;     
     /**
      * Constructor for objects of class Demon
+     * 
+     * @param demon_hp The demon's strength
+     * @param demon_str The demon's hitpoints
      */
     public Demon (int str, int hp, int magic)
     {
@@ -40,6 +42,12 @@ public class Demon extends Creature
         
     }
     
+    /**
+     * Calculates demon's damage depending on magic chance
+     * 
+     * @param damage Calculates damage
+     * @return Returns damage to superclass
+     */
     public int demonDamage(int damage)
     {
         // put your code here

@@ -1,9 +1,10 @@
 
 /**
- * A magical creature. 
+ * The Elf class extends from the Creature class. It calculates the elf's hp, 
+ * strength, and magic chances. 
  *
  * @author Emily Lubonty
- * @version 4-7-2025
+ * @version 4-9-2025
  */
 public class Elf extends Creature
 {
@@ -32,10 +33,9 @@ public class Elf extends Creature
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Calculates damage done by elf if magic chance is enacted. 
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return damage Damage taken if elf magic is implemented. 
      */
     public int elf_damage(int damage)
     {

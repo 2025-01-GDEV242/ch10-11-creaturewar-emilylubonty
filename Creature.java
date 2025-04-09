@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * the creature is alive or knocked out. The creature is also responsible for calculating
  * damage delivered based on the creature's strength (1 to str) 
  * 
- * @author Crosbie
- * @version 2025-04 v1.0
+ * @author Emily Lubonty
+ * @version 4-9-2025
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature 
@@ -17,8 +17,6 @@ public abstract class Creature
     private  int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
     private  int hp;         // the current numberof hit points the creature has
     private int magic; 
-    
-    
     
     private ArrayList<Creature> armyOne;
     
@@ -37,6 +35,11 @@ public abstract class Creature
        max_hp = hp;
     }
     
+    /**
+     * Adds Creatures to their designated armies
+     * 
+     * @param human Creates a new human to be added to the army. 
+     */
     public void addArmy(){
         ArrayList<Creature> armyOne = new ArrayList<Creature>(); 
         

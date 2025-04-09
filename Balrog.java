@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Balrog here.
+ * Balrog class is a subclass of the Demon class, which extends from the Creature
+ * class. This class calculates the Balrog's hp, strength, and magic chance. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Emily Lubonty
+ * @version 4-9-2025
  */
 public class Balrog extends Demon
 {
@@ -30,6 +31,12 @@ public class Balrog extends Demon
         );
     }
 
+    /**
+     * Calculates damage done by Balrog. 
+     * 
+     * @param attack Increments the amount of times Balrog can attack
+     * @return Returns the amount of times Balrog has attacked.
+     */
     public int balrog_attack(int attack){
         attack++;
         return attack; 
