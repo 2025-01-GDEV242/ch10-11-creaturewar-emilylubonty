@@ -10,7 +10,6 @@ import java.util.ArrayList;
  * @author Emily Lubonty
  * @version 4-9-2025
  */
-// we will learn what the abstract keyword does in a later chapter
 public abstract class Creature 
 {
     private  int str;        // The strength of this creature
@@ -69,7 +68,6 @@ public abstract class Creature
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
         if (this.hp <= 0){
             return false;
         }
@@ -81,7 +79,6 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
         if (this.hp <= 0){
             return false;  
         }
@@ -95,7 +92,6 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public int takeDamage(int damage) {
-        // TODO: implement this 
         this.hp = this.hp - damage; 
         return this.hp;
     }

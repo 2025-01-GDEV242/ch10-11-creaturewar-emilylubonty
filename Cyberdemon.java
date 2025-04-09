@@ -7,7 +7,6 @@
  */
 public class Cyberdemon extends Demon 
 {
-    // instance variables - replace the example below with your own
     private static final int MAX_CYBERDEMON_HP = 100;
     private static final int MIN_CYBERDEMON_HP = 25; 
     private static final int MAX_CYBERDEMON_STR = 40;
@@ -21,7 +20,6 @@ public class Cyberdemon extends Demon
      */
     public Cyberdemon()
     {
-        // initialise instance variables
         super(
             Randomizer.nextInt(MAX_CYBERDEMON_STR-MIN_CYBERDEMON_STR) + MIN_CYBERDEMON_STR,
             Randomizer.nextInt(MAX_CYBERDEMON_HP-MIN_CYBERDEMON_HP) + MIN_CYBERDEMON_HP,
