@@ -13,9 +13,10 @@
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature 
 {
-    private int str;        // The strength of this creature
-    private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
-    private int hp;         // the current numberof hit points the creature has
+    private  int str;        // The strength of this creature
+    private  int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
+    private  int hp;         // the current numberof hit points the creature has
+    private int magic; 
     
     /**
      * Create a creature with a given strength and hit point level. 
@@ -25,9 +26,10 @@ public abstract class Creature
      * @param str the strength of the creature, used to calculate damage
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
-    public Creature (int str, int hp) {
+    public Creature (int str, int hp, int magic) {
        this.str = str;
        this.hp = hp;
+       this.magic = magic;
        max_hp = hp;
     }
     
@@ -50,7 +52,7 @@ public abstract class Creature
     public boolean isAlive() {
         // TODO: implement a method to report if the creature yet lives
         
-        return false; //change this
+        return true;
     }
     
     /**
@@ -59,7 +61,7 @@ public abstract class Creature
      */
     public boolean isKnockedOut() {
         //TODO: implement a method to report if the creature has been killed
-        return false; //change this
+        return true;
     }
     
     
@@ -68,8 +70,10 @@ public abstract class Creature
      * the current total of hit points
      * @param damage value to remove from hit point count
      */
-    public void takeDamage(int damage) {
+    public int takeDamage(int damage) {
         // TODO: implement this
+        this.hp = this.hp - damage; 
+        return this.hp;
     }
     
 }
